@@ -5,84 +5,867 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Next-Generation AI Systems</title>
     <meta name="description" content="Project page for the Next-Generation AI Systems paper.">
-    <style>
-      :root {
-        --youtu-blue: #0052d9;
-        --link-blue: #0066bf;
-        --paper-blue: #edf5fe;
-        --paper-text: #1c2b33;
-        --paper-bg: #f1f4f7;
-        --frame-blue: #36558c;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        font-family: "Source Sans Pro", "Segoe UI", Arial, sans-serif;
-        color: var(--paper-text);
-        background: #fff;
-      }
-
-      main {
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        padding: 48px 20px;
-        background:
-          linear-gradient(180deg, rgba(237, 245, 254, 0.92), rgba(255, 255, 255, 0.98)),
-          var(--paper-bg);
-      }
-
-      .paper-shell {
-        width: min(920px, 100%);
-        border-top: 4px solid var(--youtu-blue);
-        background: #fff;
-        padding: clamp(28px, 6vw, 64px);
-        box-shadow: 0 24px 80px rgba(28, 43, 51, 0.12);
-      }
-
-      .eyebrow {
-        margin: 0 0 16px;
-        color: var(--frame-blue);
-        font-weight: 700;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        font-size: 0.8rem;
-      }
-
-      h1 {
-        margin: 0;
-        font-size: clamp(2.4rem, 6vw, 5rem);
-        line-height: 1.02;
-        letter-spacing: 0;
-      }
-
-      p {
-        max-width: 680px;
-        margin: 24px 0 0;
-        font-size: 1.15rem;
-        line-height: 1.7;
-      }
-
-      a {
-        color: var(--link-blue);
-      }
-    </style>
+    <link rel="icon" href="assets/logos/youtulogo.jpg">
+    <link rel="stylesheet" href="styles.css?v=20260608e">
   </head>
   <body>
+    <header class="site-header">
+      <a class="brand" href="#hero" aria-label="Next-Generation AI Systems home">
+        <img src="assets/logos/tencentyoutu.png" alt="Tencent YouTu Lab">
+        <span>Next-Generation AI Systems</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#overview">Overview</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#cognitive-core">Cognitive Core</a>
+        <a href="#task-execution">Task Execution</a>
+        <a href="#workspace-skill">Workspace + Skill</a>
+        <a href="#data-eval">Data & Eval</a>
+        <a href="#future">Future</a>
+        <a href="#resources">Resources</a>
+      </nav>
+    </header>
+
     <main>
-      <section class="paper-shell" aria-label="Paper project placeholder">
-        <p class="eyebrow">Paper Project Page</p>
-        <h1>Next-Generation AI Systems</h1>
-        <p>
-          This GitHub Pages site is ready for the paper publicity website.
-          The full project page can now be built on top of the Tencent YouTu
-          paper visual language extracted from the LaTeX source.
-        </p>
+      <section id="hero" class="hero section-band">
+        <div class="section-inner hero-inner">
+          <p class="eyebrow">Tencent YouTu Lab Research Paper</p>
+          <h1><span>Next-Generation</span> <span>AI Systems</span></h1>
+          <p class="subtitle">From Chatbot to Digital Colleague</p>
+          <p class="lead">
+            A survey of how large language models are evolving from conversational answer generators into
+            integrated AI systems for reasoning, action, memory, and self-improvement.
+          </p>
+
+          <div class="author-block" aria-label="Authors and affiliations">
+            <p><span>Author One*</span><span>Author Two</span><span>Author Three</span></p>
+            <p><span><sup>1</sup>Affiliation One</span><span><sup>2</sup>Affiliation Two</span></p>
+          </div>
+
+          <div class="hero-actions" aria-label="Primary resources">
+            <a class="button primary" href="#resources">Paper</a>
+            <a class="button" href="#resources">Code</a>
+            <a class="button" href="#resources">Citation</a>
+          </div>
+
+          <figure class="hero-figure">
+            <img class="hero-art" src="assets/figures/png/abs.png" alt="Overview of the transition from conversational chatbots to persistent digital colleagues.">
+            <figcaption>Overview of the transition from conversational chatbots to persistent digital colleagues.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="overview" class="section-band">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Overview</p>
+            <h2>Abstract</h2>
+          </div>
+          <div class="abstract-box">
+            <p>
+              Large Language Models (LLMs) are undergoing a fundamental transformation from conversational generators
+              into integrated AI systems for reasoning, action, memory, and self-improvement. We conceptualize this
+              transition as a shift from Chatbot to Digital Colleague: from conversational answers to persistent work.
+              We organize this transition along two tightly coupled dimensions. First, at the cognitive core level,
+              LLMs evolve from Chatbot-era "fast thinking" systems driven by next-token prediction to Thinking LLMs
+              that use inference-time computation, Chain-of-Thought reasoning, reflection, process supervision, and
+              reinforcement learning for deliberate cognition. Second, at the tool-augmented task execution level,
+              LLMs progress from fragile Agents that invoke tools into OpenClaw-style workstation systems (OpenClaw)
+              with persistent Workspaces, skills, verification loops, and governance. The proposed "Workspace + Skill"
+              paradigm turns episodic tool use into colleague-like work, enabling state persistence, reusable procedures,
+              task closure, and experience reuse. Finally, we examine shifts in data construction from instruction-response
+              pairs to State-Action-Observation trajectories and evaluation from static benchmarks to sandboxed, auditable,
+              self-evolving AI ecosystems.
+            </p>
+          </div>
+
+          <h3>Key Contributions</h3>
+          <div class="contribution-grid">
+            <article class="info-card">
+              <span>01</span>
+              <h4>Two-Dimensional View</h4>
+              <p>Cognitive-core evolution and tool-augmented task execution organize the field's progress.</p>
+            </article>
+            <article class="info-card">
+              <span>02</span>
+              <h4>Digital Colleague Shift</h4>
+              <p>Workspace + Skill explains how chatbot-style interaction becomes persistent digital work.</p>
+            </article>
+            <article class="info-card">
+              <span>03</span>
+              <h4>Task Closure</h4>
+              <p>State, reusable procedures, verification, recoverability, and governance become system-level requirements.</p>
+            </article>
+            <article class="info-card">
+              <span>04</span>
+              <h4>Auditable AI Ecosystems</h4>
+              <p>Data and evaluation move toward trajectories, final-state evidence, and sandboxed task completion.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="roadmap" class="section-band tinted">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Roadmap</p>
+            <h2>Roadmap of Next-Generation AI Systems</h2>
+            <p>
+              The paper organizes AI systems across cognitive-core evolution and tool-augmented task execution:
+              from chatbots, to thinking LLMs, to agents, and then to persistent workspace systems.
+            </p>
+          </div>
+          <figure class="figure-wide roadmap-map">
+            <img src="assets/figures/png/map.png" alt="Roadmap and evolutionary timeline of next-generation AI systems.">
+            <figcaption>A roadmap and evolutionary timeline showing how AI systems progress from chatbots to reasoning cores, tool-using agents, and persistent workspace systems.</figcaption>
+          </figure>
+          <figure class="figure-wide compact">
+            <img src="assets/figures/png/horizon.png" alt="Time horizon growth of frontier AI agents.">
+            <figcaption>Time horizon growth shows the movement from short response generation toward longer, more complex, and sustained task completion.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="cognitive-core" class="section-band">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Cognitive Core</p>
+            <h2>From Fast Response to Deliberate Reasoning</h2>
+            <p>
+              The first axis concerns how the model itself thinks. Chatbot-era systems are fast, stateless
+              generators. Thinking LLMs introduce slower cognition through inference-time computation, long traces,
+              reflection, process supervision, and reinforcement learning.
+            </p>
+          </div>
+
+          <div class="paired-panels">
+            <article>
+              <h3>Chatbot Era</h3>
+              <p>
+                In the Chatbot Era, a user asks a natural-language question, the model performs fast single-pass
+                inference over compressed parametric knowledge, and the system returns a fluent response.
+              </p>
+              <figure class="figure-frame">
+                <img src="assets/figures/png/chatbot.png" alt="The Chatbot Era diagram.">
+                <figcaption>The Chatbot Era: fast, stateless, single-pass response generation.</figcaption>
+              </figure>
+            </article>
+            <article>
+              <h3>Thinking LLM Era</h3>
+              <p>
+                Thinking LLMs allocate additional computation at inference time. They explore alternatives, verify
+                intermediate steps, and revise before returning an answer.
+              </p>
+              <figure class="figure-frame">
+                <img src="assets/figures/png/thinkingllm.png" alt="The Thinking LLM Era diagram.">
+                <figcaption>The Thinking LLM Era: slow, reflective reasoning with longer chains and deeper search.</figcaption>
+              </figure>
+            </article>
+          </div>
+
+          <div class="table-group">
+            <p class="table-intro">Representative-model tables summarize the transition from non-reasoning chatbot-era LLMs to reasoning-oriented Thinking LLMs.</p>
+            <details class="paper-table catalog-details">
+              <summary>Representative Chatbot-Era LLMs</summary>
+              <div class="table-scroll">
+                  <table class="catalog-table">
+                    <thead>
+                      <tr><th>Model</th><th>Rel.</th><th>Para.</th><th>Type</th><th>Acc.</th><th>Model</th><th>Rel.</th><th>Para.</th><th>Type</th><th>Acc.</th></tr>
+                    </thead>
+                    <tbody>
+                    <tr><td>GPT-1</td><td>2018-06</td><td>117M</td><td>Text</td><td>Open</td><td>Orca</td><td>2023-06</td><td>13B</td><td>Text</td><td>Closed</td></tr>
+                    <tr><td>GPT-2</td><td>2019-02</td><td>1.5B</td><td>Text</td><td>Open</td><td>Llama 2</td><td>2023-07</td><td>7&ndash;70B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>PLATO</td><td>2019-10</td><td>132M</td><td>Text</td><td>Open</td><td>InternLM</td><td>2023-07</td><td>7B/20B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>T5</td><td>2019-10</td><td>60M&ndash;11B</td><td>Text</td><td>Open</td><td>Claude 2</td><td>2023-07</td><td>-</td><td>Text</td><td>Closed</td></tr>
+                    <tr><td>DialoGPT</td><td>2019-11</td><td>117M/345M/762M</td><td>Text</td><td>Open</td><td>WizardLM</td><td>2023-07</td><td>7B/13B/30B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Meena</td><td>2020-01</td><td>2.6B</td><td>Text</td><td>Closed</td><td>Qwen</td><td>2023-08</td><td>1.8&ndash;72B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>BlenderBot</td><td>2020-04</td><td>90M/2.7B/9.4B</td><td>Text</td><td>Open</td><td>Qwen-VL</td><td>2023-08</td><td>9.6B</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>GPT-3</td><td>2020-05</td><td>175B</td><td>Text</td><td>Closed</td><td>OpenFlamingo</td><td>2023-08</td><td>3&ndash;9B</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>PLATO-2</td><td>2020-06</td><td>93M/314M/1.6B</td><td>Text</td><td>Open</td><td>Code Llama-Instruct</td><td>2023-08</td><td>7B/13B/34B</td><td>Code</td><td>Open</td></tr>
+                    <tr><td>BlenderBot 2</td><td>2021-07</td><td>400M/2.7B</td><td>Text</td><td>Open</td><td>WizardMath</td><td>2023-08</td><td>7B/13B/70B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Jurassic-1</td><td>2021-08</td><td>178B</td><td>Text</td><td>Closed</td><td>WizardCoder</td><td>2023-08</td><td>7B/13B/34B</td><td>Code</td><td>Open</td></tr>
+                    <tr><td>Codex</td><td>2021-08</td><td>12M-12B</td><td>Text</td><td>Closed</td><td>IDEFICS</td><td>2023-08</td><td>9B/80B</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>HyperCLOVA</td><td>2021-09</td><td>82B</td><td>Text</td><td>Closed</td><td>Phi-1.5</td><td>2023-09</td><td>1.3B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>PLATO-XL</td><td>2021-09</td><td>11B</td><td>Text</td><td>Open</td><td>Baichuan 2</td><td>2023-09</td><td>7B/13B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Gopher</td><td>2021-12</td><td>280B</td><td>Text</td><td>Closed</td><td>GPT-4V</td><td>2023-09</td><td>-</td><td>Multi</td><td>Closed</td></tr>
+                    <tr><td>ERNIE 3.0 Titan</td><td>2021-12</td><td>260B</td><td>Text</td><td>Closed</td><td>Mistral 7B</td><td>2023-09</td><td>7.3B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>GLaM</td><td>2021-12</td><td>1.2T-A97B</td><td>Text</td><td>Closed</td><td>Mixtral</td><td>2023-09</td><td>7B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>LaMDA</td><td>2022-01</td><td>137B</td><td>Text</td><td>Closed</td><td>Kimi / Moonshot</td><td>2023-10</td><td>-</td><td>Text</td><td>Closed</td></tr>
+                    <tr><td>AlphaCode</td><td>2022-02</td><td>9B/41B</td><td>Text</td><td>Closed</td><td>ERNIE 4.0</td><td>2023-10</td><td>-</td><td>Multi</td><td>Closed</td></tr>
+                    <tr><td>InstructGPT</td><td>2022-03</td><td>1.3&ndash;175B</td><td>Text</td><td>Closed</td><td>Fuyu</td><td>2023-10</td><td>8B</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>Chinchilla</td><td>2022-03</td><td>70B</td><td>Text</td><td>Closed</td><td>Zephyr-7B</td><td>2023-10</td><td>7B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>CodeGen</td><td>2022-03</td><td>350M/2B/6B/16B</td><td>Text</td><td>Open</td><td>ChatGLM3-6B</td><td>2023-10</td><td>6B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>PaLM</td><td>2022-04</td><td>540B</td><td>Text</td><td>Closed</td><td>Skywork-13B</td><td>2023-10</td><td>13B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Flamingo</td><td>2022-04</td><td>80B</td><td>Multi</td><td>Closed</td><td>GPT-4 Turbo</td><td>2023-11</td><td>-</td><td>Text</td><td>Closed</td></tr>
+                    <tr><td>OPT</td><td>2022-05</td><td>125M&ndash;175B</td><td>Text</td><td>Open</td><td>Grok-1</td><td>2023-11</td><td>314B-A78.5B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>GODEL</td><td>2022-06</td><td>220M/770M</td><td>Text</td><td>Open</td><td>Yi</td><td>2023-11</td><td>6B/34B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>BLOOM</td><td>2022-07</td><td>176B</td><td>Text</td><td>Open</td><td>CogVLM</td><td>2023-11</td><td>17B</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>BlenderBot 3</td><td>2022-08</td><td>3B/30B/175B</td><td>Text</td><td>Open</td><td>Claude 2.1</td><td>2023-11</td><td>-</td><td>Text</td><td>Closed</td></tr>
+                    <tr><td>PaLI / PaLI-X</td><td>2022-09</td><td>17B/55B</td><td>Multi</td><td>Closed</td><td>Inflection-2</td><td>2023-11</td><td>-</td><td>Text</td><td>Closed</td></tr>
+                    <tr><td>Sparrow</td><td>2022-09</td><td>70B</td><td>Text</td><td>Closed</td><td>DeepSeek Coder Instruct</td><td>2023-11</td><td>1B&ndash;33B</td><td>Code</td><td>Open</td></tr>
+                    <tr><td>CodeGeeX</td><td>2022-09</td><td>13B</td><td>Text</td><td>Open</td><td>OpenChat 3.5</td><td>2023-11</td><td>7B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>GLM-130B</td><td>2022-10</td><td>130B</td><td>Text</td><td>Open</td><td>DeepSeek LLM</td><td>2023-11</td><td>7B/67B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Galactica</td><td>2022-11</td><td>120B</td><td>Text</td><td>Open</td><td>Orca 2</td><td>2023-11</td><td>7B/13B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>BLIP-2</td><td>2023-01</td><td>4B-12B</td><td>Multi</td><td>Open</td><td>Mixtral 8x7B</td><td>2023-12</td><td>47B-A13B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Llama</td><td>2023-02</td><td>7&ndash;65B</td><td>Text</td><td>Open</td><td>Phi-2</td><td>2023-12</td><td>2.7B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Alpaca</td><td>2023-03</td><td>7B</td><td>Text</td><td>Open</td><td>Gemini 1.0</td><td>2023-12</td><td>-</td><td>Multi</td><td>Closed</td></tr>
+                    <tr><td>Claude 1</td><td>2023-03</td><td>-</td><td>Text</td><td>Closed</td><td>InternVL 1.0</td><td>2023-12</td><td>6B+</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>PanGu-Sigma</td><td>2023-03</td><td>1.085T</td><td>Text</td><td>Closed</td><td>SOLAR-10.7B</td><td>2023-12</td><td>10.7B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>BloombergGPT</td><td>2023-03</td><td>50B</td><td>Text</td><td>Closed</td><td>GLM-4</td><td>2024-01</td><td>-</td><td>Text</td><td>Closed</td></tr>
+                    <tr><td>ChatGLM-6B</td><td>2023-03</td><td>~6.2B</td><td>Text</td><td>Open</td><td>GLM-4V</td><td>2024-01</td><td>9B</td><td>Multi</td><td>Closed</td></tr>
+                    <tr><td>GPT-4</td><td>2023-03</td><td>-</td><td>Multi</td><td>Closed</td><td>LLaVA-NeXT</td><td>2024-01</td><td>7&ndash;34B</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>PaLM-E</td><td>2023-03</td><td>562B</td><td>Multi</td><td>Closed</td><td>Stable LM 2</td><td>2024-01</td><td>1.6B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Vicuna</td><td>2023-03</td><td>7B/13B</td><td>Text</td><td>Open</td><td>Yi-VL</td><td>2024-01</td><td>6B/34B</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>GPT-3.5 Turbo</td><td>2023-03</td><td>-</td><td>Text</td><td>Closed</td><td>Mistral Large</td><td>2024-02</td><td>-</td><td>Text</td><td>Closed</td></tr>
+                    <tr><td>Pythia</td><td>2023-04</td><td>70M&ndash;12B</td><td>Text</td><td>Open</td><td>Qwen 1.5</td><td>2024-02</td><td>0.5&ndash;72B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>LLaVA</td><td>2023-04</td><td>7B/13B</td><td>Multi</td><td>Open</td><td>Gemini 1.5</td><td>2024-02</td><td>-</td><td>Multi</td><td>Closed</td></tr>
+                    <tr><td>MiniGPT-4</td><td>2023-04</td><td>7B/13B</td><td>Multi</td><td>Open</td><td>OLMo</td><td>2024-02</td><td>1B/7B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Dolly 2.0</td><td>2023-04</td><td>12B</td><td>Text</td><td>Open</td><td>StarCoder2</td><td>2024-02</td><td>3B/7B/15B</td><td>Code</td><td>Open</td></tr>
+                    <tr><td>Stable LM</td><td>2023-04</td><td>3B/7B</td><td>Text</td><td>Open</td><td>Reka Flash</td><td>2024-02</td><td>21B</td><td>Multi</td><td>Closed</td></tr>
+                    <tr><td>Falcon</td><td>2023-05</td><td>7&ndash;180B</td><td>Text</td><td>Open</td><td>Gemma</td><td>2024-03</td><td>2B/7B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>MPT</td><td>2023-05</td><td>7B/30B</td><td>Text</td><td>Open</td><td>Qwen1.5-MoE</td><td>2024-03</td><td>14B-A2.7B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>StarCoder</td><td>2023-05</td><td>15.5B</td><td>Text</td><td>Open</td><td>DBRX</td><td>2024-03</td><td>132B-A36B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>RedPajama</td><td>2023-05</td><td>3B/7B</td><td>Text</td><td>Open</td><td>Jamba</td><td>2024-03</td><td>52B-A12B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>InstructBLIP</td><td>2023-05</td><td>-</td><td>Multi</td><td>Open</td><td>Claude 3</td><td>2024-03</td><td>-</td><td>Multi</td><td>Closed</td></tr>
+                    <tr><td>PaLM 2</td><td>2023-05</td><td>-</td><td>Text</td><td>Closed</td><td>Command R</td><td>2024-03</td><td>35B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>CodeT5+</td><td>2023-05</td><td>220M-16B</td><td>Code</td><td>Open</td><td>Inflection-2.5</td><td>2024-03</td><td>-</td><td>Text</td><td>Closed</td></tr>
+                    <tr><td>Inflection-1</td><td>2023-06</td><td>-</td><td>Text</td><td>Closed</td><td>DeepSeek-VL</td><td>2024-03</td><td>1.3B/7B</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>Phi-1</td><td>2023-06</td><td>1.3B</td><td>Text</td><td>Open</td><td>Grok-1.5</td><td>2024-03</td><td>-</td><td>Text</td><td>Closed</td></tr>
+                    <tr><td>Aquila</td><td>2023-06</td><td>7B/33B</td><td>Text</td><td>Open</td><td>MM1</td><td>2024-03</td><td>3B/7B/30B</td><td>Multi</td><td>Closed</td></tr>
+                    <tr><td>ChatGLM2-6B</td><td>2023-06</td><td>6B</td><td>Text</td><td>Open</td><td>Yi-9B</td><td>2024-03</td><td>9B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Baichuan-Chat</td><td>2023-06</td><td>7B/13B</td><td>Text</td><td>Open</td><td>Phi-3</td><td>2024-04</td><td>3.8&ndash;14B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>XGen-7B</td><td>2023-06</td><td>7B</td><td>Text</td><td>Open</td><td>Mixtral 8x22B</td><td>2024-04</td><td>141B-A39B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Llama 3</td><td>2024-04</td><td>8B-A70B</td><td>Text</td><td>Open</td><td>Llama-3.1-Nemotron-70B</td><td>2024-11</td><td>70B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Command R+</td><td>2024-04</td><td>104B</td><td>Text</td><td>Open</td><td>Hunyuan-Large</td><td>2024-11</td><td>389B-A52B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>InternVL 1.5</td><td>2024-04</td><td>26B</td><td>Multi</td><td>Open</td><td>OLMo 2</td><td>2024-11</td><td>7B/13B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Reka Core</td><td>2024-04</td><td>-</td><td>Multi</td><td>Closed</td><td>Pixtral Large</td><td>2024-11</td><td>124B</td><td>Multi</td><td>Mixed</td></tr>
+                    <tr><td>CodeQwen1.5</td><td>2024-04</td><td>7B</td><td>Code</td><td>Open</td><td>SmolVLM</td><td>2024-11</td><td>2B</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>IDEFICS2</td><td>2024-04</td><td>8B</td><td>Multi</td><td>Open</td><td>DeepSeek-V3</td><td>2024-12</td><td>671B-A37B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>OpenELM</td><td>2024-04</td><td>270M-3B</td><td>Text</td><td>Open</td><td>Llama 3.3</td><td>2024-12</td><td>70B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Snowflake Arctic</td><td>2024-04</td><td>480B-A17B</td><td>Text</td><td>Open</td><td>PaliGemma 2</td><td>2024-12</td><td>3B/10B/28B</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>Doubao</td><td>2024-05</td><td>-</td><td>Text</td><td>Closed</td><td>DeepSeek-VL2</td><td>2024-12</td><td>27B-A4.5B</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>DeepSeek-V2</td><td>2024-05</td><td>236B-A21B</td><td>Text</td><td>Open</td><td>Falcon 3</td><td>2024-12</td><td>1B-10B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>GPT-4o</td><td>2024-05</td><td>-</td><td>Multi</td><td>Closed</td><td>Granite 3.1</td><td>2024-12</td><td>1B-8B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>CogVLM2</td><td>2024-05</td><td>19B</td><td>Multi</td><td>Open</td><td>InternVL2.5</td><td>2024-12</td><td>1B&ndash;78B</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>MiniCPM-V</td><td>2024-05</td><td>2&ndash;8B</td><td>Multi</td><td>Open</td><td>MiniMax-Text-01</td><td>2025-01</td><td>456B-A45.9B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Codestral</td><td>2024-05</td><td>22B</td><td>Code</td><td>Open</td><td>MiniMax-VL-01</td><td>2025-01</td><td>456B-A45.9B</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>Falcon 2</td><td>2024-05</td><td>11B</td><td>Multi</td><td>Open</td><td>Qwen2.5-Max</td><td>2025-01</td><td>-</td><td>Text</td><td>Closed</td></tr>
+                    <tr><td>PaliGemma</td><td>2024-05</td><td>3B</td><td>Multi</td><td>Open</td><td>MiniCPM-o 2.6</td><td>2025-01</td><td>8B</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>Aya 23</td><td>2024-05</td><td>8B/35B</td><td>Text</td><td>Open</td><td>Qwen2.5-VL</td><td>2025-01</td><td>3B/7B/72B</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>Granite Code</td><td>2024-05</td><td>3B-34B</td><td>Code</td><td>Open</td><td>Janus-Pro</td><td>2025-01</td><td>1B/7B</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>Qwen 2</td><td>2024-06</td><td>0.5&ndash;72B</td><td>Text</td><td>Open</td><td>Mistral Small 3</td><td>2025-01</td><td>24B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>GLM-4-9B</td><td>2024-06</td><td>9B</td><td>Text</td><td>Open</td><td>GPT-4.5</td><td>2025-02</td><td>-</td><td>Text</td><td>Closed</td></tr>
+                    <tr><td>Claude 3.5 Sonnet</td><td>2024-06</td><td>-</td><td>Multi</td><td>Closed</td><td>Phi-4-mini</td><td>2025-02</td><td>4B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Cambrian-1</td><td>2024-06</td><td>3&ndash;34B</td><td>Multi</td><td>Open</td><td>Phi-4-multimodal</td><td>2025-02</td><td>6B</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>DeepSeek-Coder-V2</td><td>2024-06</td><td>236B-A21B</td><td>Code</td><td>Open</td><td>Command A</td><td>2025-03</td><td>111B</td><td>Text</td><td>Closed</td></tr>
+                    <tr><td>Nemotron-4</td><td>2024-06</td><td>340B</td><td>Text</td><td>Open</td><td>Mistral Small 3.1</td><td>2025-03</td><td>24B</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>Gemma 2</td><td>2024-06</td><td>2B/9B/27B</td><td>Text</td><td>Open</td><td>Aya Vision</td><td>2025-03</td><td>8B/32B</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>Skywork-MoE</td><td>2024-06</td><td>146B-A22B</td><td>Text</td><td>Open</td><td>Qwen2.5-VL-32B</td><td>2025-03</td><td>32B</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>InternVL 2.0</td><td>2024-07</td><td>1&ndash;76B</td><td>Multi</td><td>Open</td><td>OLMo 2 32B</td><td>2025-03</td><td>32B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Llama 3.1</td><td>2024-07</td><td>8&ndash;405B</td><td>Text</td><td>Open</td><td>GPT-4.1</td><td>2025-04</td><td>-</td><td>Multi</td><td>Closed</td></tr>
+                    <tr><td>InternLM 2.5</td><td>2024-07</td><td>1.8&ndash;20B</td><td>Text</td><td>Open</td><td>GPT-4.1 mini</td><td>2025-04</td><td>-</td><td>Multi</td><td>Closed</td></tr>
+                    <tr><td>GPT-4o mini</td><td>2024-07</td><td>-</td><td>Multi</td><td>Closed</td><td>GPT-4.1 nano</td><td>2025-04</td><td>-</td><td>Multi</td><td>Closed</td></tr>
+                    <tr><td>Codestral Mamba</td><td>2024-07</td><td>7B</td><td>Code</td><td>Open</td><td>Granite 3.3</td><td>2025-04</td><td>2B/8B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Mistral NeMo</td><td>2024-07</td><td>12B</td><td>Text</td><td>Open</td><td>Kimi-VL-A3B-Instruct</td><td>2025-04</td><td>16B-A2.8B</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>SmolLM</td><td>2024-07</td><td>135M/360M/1.7B</td><td>Text</td><td>Open</td><td>Amazon Nova Premier</td><td>2025-04</td><td>-</td><td>Multi</td><td>Closed</td></tr>
+                    <tr><td>Mistral Large 2</td><td>2024-07</td><td>123B</td><td>Text</td><td>Open</td><td>Mistral Medium 3</td><td>2025-05</td><td>-</td><td>Multi</td><td>Closed</td></tr>
+                    <tr><td>LLaVA-OV</td><td>2024-08</td><td>0.5&ndash;72B</td><td>Multi</td><td>Open</td><td>Devstral</td><td>2025-05</td><td>24B</td><td>Code</td><td>Open</td></tr>
+                    <tr><td>Grok-2</td><td>2024-08</td><td>-</td><td>Text</td><td>Closed</td><td>ERNIE-4.5-300B-A47B</td><td>2025-06</td><td>300B-A47B</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>Grok-1.5V</td><td>2024-08</td><td>-</td><td>Multi</td><td>Closed</td><td>Qwen3-4B-Instruct</td><td>2025-07</td><td>4B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Phi-3.5-mini-instruct</td><td>2024-08</td><td>3.8B</td><td>Text</td><td>Open</td><td>Kimi K2 Instruct</td><td>2025-07</td><td>1T-A32B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Phi-3.5-MoE-instruct</td><td>2024-08</td><td>42B-A6.6B</td><td>Multi</td><td>Open</td><td>Qwen3-Coder</td><td>2025-07</td><td>480B-A35B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Jamba 1.5</td><td>2024-08</td><td>398B-A94B</td><td>Text</td><td>Open</td><td>FastVLM</td><td>2025-07</td><td>0.5B/1.5B/7B</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>Qwen2-VL</td><td>2024-09</td><td>2&ndash;72B</td><td>Multi</td><td>Open</td><td>LFM2-VL</td><td>2025-08</td><td>450M/1.6B/3B</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>Llama 3.2 Text</td><td>2024-09</td><td>1B/3B</td><td>Text</td><td>Open</td><td>LongCat-Flash-Chat</td><td>2025-08</td><td>560B-A27B</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>Llama 3.2 Vision</td><td>2024-09</td><td>11B/90B</td><td>Multi</td><td>Open</td><td>Qwen3-Next</td><td>2025-09</td><td>81B-A3B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Qwen2.5</td><td>2024-09</td><td>0.5&ndash;72B</td><td>Text</td><td>Open</td><td>Qwen3-VL</td><td>2025-09</td><td>235B-A22B</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>Pixtral</td><td>2024-09</td><td>12B</td><td>Multi</td><td>Open</td><td>Mistral Large 3</td><td>2025-12</td><td>675B-A41B</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>OLMoE</td><td>2024-09</td><td>7B-A1B</td><td>Text</td><td>Open</td><td>Ministral 3 Instruct</td><td>2025-12</td><td>3B/8B/14B</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>Molmo</td><td>2024-09</td><td>7B/72B</td><td>Multi</td><td>Open</td><td>Devstral 2</td><td>2025-12</td><td>123B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Claude 3.5 Haiku</td><td>2024-10</td><td>-</td><td>Text</td><td>Closed</td><td>Devstral Small 2</td><td>2025-12</td><td>24B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Aya Expanse</td><td>2024-10</td><td>8B/32B</td><td>Text</td><td>Open</td><td>Qwen3-Coder-Next</td><td>2026-02</td><td>80B-A3B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Granite 3.0</td><td>2024-10</td><td>1B-8B</td><td>Text</td><td>Open</td><td>LongCat-Flash-Lite</td><td>2026-02</td><td>68.5B-A3B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Yi-Lightning</td><td>2024-10</td><td>-</td><td>Text</td><td>Closed</td><td>Mistral Small 4-instruct</td><td>2026-03</td><td>119B-A6B</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>Qwen2.5-Coder</td><td>2024-11</td><td>0.5&ndash;32B</td><td>Text</td><td>Open</td><td>LongCat-Next</td><td>2026-03</td><td>68.5B-A3B</td><td>Multi</td><td>Open</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+            </details>
+            <details class="paper-table catalog-details">
+              <summary>Representative Thinking LLMs</summary>
+              <div class="table-scroll">
+                  <table class="catalog-table">
+                    <thead>
+                      <tr><th>Model</th><th>Rel.</th><th>Para.</th><th>Type</th><th>Acc.</th><th>Model</th><th>Rel.</th><th>Para.</th><th>Type</th><th>Acc.</th></tr>
+                    </thead>
+                    <tbody>
+                    <tr><td>o1-preview</td><td>2024-09</td><td>-</td><td>Text</td><td>Closed</td><td>Claude 4 Opus</td><td>2025-05</td><td>-</td><td>Multi</td><td>Closed</td></tr>
+                    <tr><td>o1-mini</td><td>2024-09</td><td>-</td><td>Text</td><td>Closed</td><td>MiniMax-M1</td><td>2025-06</td><td>456B/46B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Marco-o1</td><td>2024-11</td><td>7B</td><td>Text</td><td>Open</td><td>Kimi-Dev-72B</td><td>2025-06</td><td>72B</td><td>Code</td><td>Open</td></tr>
+                    <tr><td>QwQ-32B-Preview</td><td>2024-11</td><td>32B</td><td>Text</td><td>Open</td><td>MiMo-VL-7B</td><td>2025-06</td><td>7B</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>Skywork-o1 Open</td><td>2024-11</td><td>8B</td><td>Text</td><td>Open</td><td>Hunyuan-A13B-Instruct</td><td>2025-06</td><td>80B-A13B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>o1</td><td>2024-12</td><td>-</td><td>Text</td><td>Closed</td><td>Kimi K2</td><td>2025-07</td><td>1T/32B</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>o1-pro</td><td>2024-12</td><td>-</td><td>Text</td><td>Closed</td><td>Qwen3-Coder</td><td>2025-07</td><td>480B/35B</td><td>Code</td><td>Open</td></tr>
+                    <tr><td>Gemini 2.0 Flash Thinking</td><td>2024-12</td><td>-</td><td>Multi</td><td>Closed</td><td>Qwen3-235B-Thinking-2507</td><td>2025-07</td><td>235B/22B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>QVQ-72B-Preview</td><td>2024-12</td><td>72B</td><td>Multi</td><td>Open</td><td>Grok 4</td><td>2025-07</td><td>-</td><td>Multi</td><td>Closed</td></tr>
+                    <tr><td>DeepSeek-R1-Zero</td><td>2025-01</td><td>671B/37B</td><td>Text</td><td>Open</td><td>SmolLM3</td><td>2025-07</td><td>3B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>DeepSeek-R1</td><td>2025-01</td><td>671B/37B</td><td>Text</td><td>Open</td><td>GPT-5</td><td>2025-08</td><td>~300B</td><td>Multi</td><td>Closed</td></tr>
+                    <tr><td>R1-Distill-Qwen</td><td>2025-01</td><td>1.5B&ndash;32B</td><td>Text</td><td>Open</td><td>DeepSeek-V3.1</td><td>2025-08</td><td>685B/37B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>R1-Distill-Llama</td><td>2025-01</td><td>8B/70B</td><td>Text</td><td>Open</td><td>GPT-oss-120B</td><td>2025-08</td><td>117B/5.1B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Kimi k1.5</td><td>2025-01</td><td>-</td><td>Multi</td><td>Closed</td><td>GPT-oss-20B</td><td>2025-08</td><td>20B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Sky-T1-32B</td><td>2025-01</td><td>32B</td><td>Text</td><td>Open</td><td>Claude Opus 4.1</td><td>2025-08</td><td>-</td><td>Multi</td><td>Closed</td></tr>
+                    <tr><td>o3-mini</td><td>2025-01</td><td>-</td><td>Text</td><td>Closed</td><td>ERNIE 4.5-Thinking</td><td>2025-09</td><td>21B/3B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>s1</td><td>2025-02</td><td>32B</td><td>Text</td><td>Open</td><td>Claude Sonnet 4.5</td><td>2025-09</td><td>-</td><td>Multi</td><td>Closed</td></tr>
+                    <tr><td>LIMO</td><td>2025-02</td><td>32B</td><td>Text</td><td>Open</td><td>Grok 4 Fast</td><td>2025-09</td><td>-</td><td>Multi</td><td>Closed</td></tr>
+                    <tr><td>Grok 3</td><td>2025-02</td><td>-</td><td>Multi</td><td>Closed</td><td>MiniMax-M2</td><td>2025-10</td><td>230B/10B</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>Grok 3 mini</td><td>2025-02</td><td>-</td><td>Text</td><td>Closed</td><td>Claude Haiku 4.5</td><td>2025-10</td><td>-</td><td>Multi</td><td>Closed</td></tr>
+                    <tr><td>Claude 3.7 Sonnet</td><td>2025-02</td><td>-</td><td>Multi</td><td>Closed</td><td>Grok 4.1 Fast</td><td>2025-10</td><td>-</td><td>Multi</td><td>Closed</td></tr>
+                    <tr><td>Hunyuan-T1-Preview</td><td>2025-02</td><td>-</td><td>Text</td><td>Closed</td><td>Ring-1T</td><td>2025-10</td><td>1T-A50B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Open-Reasoner-Zero</td><td>2025-02</td><td>7B/32B</td><td>Text</td><td>Open</td><td>GPT-5.1</td><td>2025-11</td><td>-</td><td>Multi</td><td>Closed</td></tr>
+                    <tr><td>TinyZero</td><td>2025-02</td><td>3B</td><td>Text</td><td>Open</td><td>Gemini 3 Pro</td><td>2025-11</td><td>-</td><td>Multi</td><td>Closed</td></tr>
+                    <tr><td>Eurus-2-PRIME</td><td>2025-02</td><td>7B</td><td>Text</td><td>Open</td><td>Grok 4.1</td><td>2025-11</td><td>-</td><td>Multi</td><td>Closed</td></tr>
+                    <tr><td>Bespoke-Stratos</td><td>2025-02</td><td>7B</td><td>Text</td><td>Open</td><td>Claude Opus 4.5</td><td>2025-11</td><td>-</td><td>Multi</td><td>Closed</td></tr>
+                    <tr><td>Light-R1</td><td>2025-02</td><td>7B/14B</td><td>Text</td><td>Open</td><td>DeepSeek-V3.2</td><td>2025-12</td><td>671B/37B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Hunyuan-TurboS</td><td>2025-02</td><td>560B-A56B</td><td>Text</td><td>Closed</td><td>DeepSeek-V3.2-Speciale</td><td>2025-12</td><td>671B/37B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Gemma 3</td><td>2025-03</td><td>4B/12B/27B</td><td>Multi</td><td>Open</td><td>Gemini 3 Flash</td><td>2025-12</td><td>-</td><td>Multi</td><td>Closed</td></tr>
+                    <tr><td>QwQ-32B</td><td>2025-03</td><td>32B</td><td>Text</td><td>Open</td><td>MiMo-V2-Flash</td><td>2025-12</td><td>309B/15B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Hunyuan-T1</td><td>2025-03</td><td>-</td><td>Text</td><td>Closed</td><td>GLM-4.7</td><td>2025-12</td><td>358B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Gemini 2.5 Pro</td><td>2025-03</td><td>-</td><td>Multi</td><td>Closed</td><td>Devstral 2</td><td>2025-12</td><td>123B</td><td>Code</td><td>Open</td></tr>
+                    <tr><td>DeepSeek-V3-0324</td><td>2025-03</td><td>671B/37B</td><td>Text</td><td>Open</td><td>GPT-5.2</td><td>2025-12</td><td>-</td><td>Multi</td><td>Closed</td></tr>
+                    <tr><td>Phi-4-reasoning</td><td>2025-04</td><td>14B</td><td>Text</td><td>Open</td><td>LongCat-Flash-Thinking-2601</td><td>2026-01</td><td>560B-A27B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Phi-4-reasoning-plus</td><td>2025-04</td><td>14B</td><td>Text</td><td>Open</td><td>Step 3.5 Flash</td><td>2026-02</td><td>-</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Qwen3</td><td>2025-04</td><td>0.6B&ndash;235B</td><td>Text</td><td>Open</td><td>Kimi K2.5</td><td>2026-02</td><td>1T/32B</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>o3</td><td>2025-04</td><td>-</td><td>Multi</td><td>Closed</td><td>Qwen3.5</td><td>2026-02</td><td>397B/17B</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>o4-mini</td><td>2025-04</td><td>-</td><td>Multi</td><td>Closed</td><td>Gemini 3.1 Pro</td><td>2026-02</td><td>-</td><td>Multi</td><td>Closed</td></tr>
+                    <tr><td>Kimi-VL-A3B-Thinking</td><td>2025-04</td><td>2.8B act.</td><td>Multi</td><td>Open</td><td>GPT-5.3-Codex</td><td>2026-02</td><td>-</td><td>Code</td><td>Closed</td></tr>
+                    <tr><td>GLM-Z1-32B</td><td>2025-04</td><td>32B</td><td>Text</td><td>Open</td><td>Claude Opus 4.6</td><td>2026-02</td><td>-</td><td>Multi</td><td>Closed</td></tr>
+                    <tr><td>Z1-Rumination-32B</td><td>2025-04</td><td>32B</td><td>Text</td><td>Open</td><td>MiniMax-M2.5</td><td>2026-02</td><td>230B-A10B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>GLM-Z1-9B</td><td>2025-04</td><td>9B</td><td>Text</td><td>Open</td><td>GPT-5.4</td><td>2026-03</td><td>-</td><td>Multi</td><td>Closed</td></tr>
+                    <tr><td>Llama 4 Maverick</td><td>2025-04</td><td>400B/17B</td><td>Multi</td><td>Open</td><td>Nemotron-Cascade-2</td><td>2026-03</td><td>30B/3B</td><td>Code</td><td>Open</td></tr>
+                    <tr><td>Llama 4 Scout</td><td>2025-04</td><td>109B/17B</td><td>Multi</td><td>Open</td><td>GPT-5.3</td><td>2026-03</td><td>-</td><td>Multi</td><td>Closed</td></tr>
+                    <tr><td>Seed-Thinking-v1.5</td><td>2025-04</td><td>-</td><td>Text</td><td>Open</td><td>MiniMax-M2.7</td><td>2026-03</td><td>230B-A10B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Nemotron-Ultra-253B</td><td>2025-04</td><td>253B/17B</td><td>Text</td><td>Open</td><td>MiMo-V2.5-Pro</td><td>2026-04</td><td>-</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>ERNIE-4.5-VL</td><td>2025-04</td><td>424B-A47B</td><td>Multi</td><td>Open</td><td>Kimi K2.6</td><td>2026-04</td><td>1T/32B</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>Codex-1</td><td>2025-05</td><td>-</td><td>Code</td><td>Closed</td><td>GLM-5.1</td><td>2026-04</td><td>754B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>DeepSeek-R1-0528</td><td>2025-05</td><td>671B/37B</td><td>Text</td><td>Open</td><td>DeepSeek-V4</td><td>2026-04</td><td>1.6T</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>R1-Distill-Qwen3-8B</td><td>2025-05</td><td>8B</td><td>Text</td><td>Open</td><td>Qwen3.6</td><td>2026-04</td><td>35B/3B+</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>R1-Distill-Qwen3-32B</td><td>2025-05</td><td>32B</td><td>Text</td><td>Open</td><td>Gemma 4</td><td>2026-04</td><td>2B&ndash;26B</td><td>Multi</td><td>Open</td></tr>
+                    <tr><td>MiMo-7B-RL</td><td>2025-05</td><td>7B</td><td>Text</td><td>Open</td><td>GPT-5.5</td><td>2026-04</td><td>-</td><td>Multi</td><td>Closed</td></tr>
+                    <tr><td>MiMo-7B-RL-0530</td><td>2025-05</td><td>7B</td><td>Text</td><td>Open</td><td>Claude Opus 4.7</td><td>2026-04</td><td>-</td><td>Multi</td><td>Closed</td></tr>
+                    <tr><td>Doubao 1.5 Pro Thinking</td><td>2025-05</td><td>-</td><td>Text</td><td>Closed</td><td>Claude Mythos Preview</td><td>2026-04</td><td>-</td><td>Multi</td><td>Closed</td></tr>
+                    <tr><td>Gemini 2.5 Flash</td><td>2025-05</td><td>-</td><td>Multi</td><td>Closed</td><td>Grok 4.3</td><td>2026-05</td><td>-</td><td>Multi</td><td>Closed</td></tr>
+                    <tr><td>InternVL3</td><td>2025-05</td><td>2B&ndash;78B</td><td>Multi</td><td>Open</td><td>Ring-2.6-1T</td><td>2026-05</td><td>1T-A63B</td><td>Text</td><td>Open</td></tr>
+                    <tr><td>Devstral</td><td>2025-05</td><td>24B</td><td>Code</td><td>Open</td><td>ERNIE 5.1</td><td>2026-05</td><td>-</td><td>Multi</td><td>Closed</td></tr>
+                    <tr><td>Claude 4 Sonnet</td><td>2025-05</td><td>-</td><td>Multi</td><td>Closed</td><td>Claude Opus 4.8</td><td>2026-05</td><td>-</td><td>Multi</td><td>Closed</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section id="task-execution" class="section-band tinted">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Task Execution</p>
+            <h2>From Agents to OpenClaw</h2>
+            <p>
+              The second axis asks how a stronger cognitive core becomes a system that can act. The Agent Era
+              introduces environment-action-feedback loops. The OpenClaw Era embeds action inside persistent workspaces.
+            </p>
+          </div>
+
+          <div class="paired-panels">
+            <article>
+              <h3>Agent Era</h3>
+              <p>Agent systems break from single-turn answering by allowing LLMs to plan, call tools, browse, write code, manipulate files, and react to observations.</p>
+              <figure class="figure-frame">
+                <img src="assets/figures/png/agent.png" alt="The Agent Era diagram.">
+                <figcaption>The Agent Era: observe, think, act, receive feedback, and iterate toward a task goal.</figcaption>
+              </figure>
+            </article>
+            <article>
+              <h3>OpenClaw Era</h3>
+              <p>OpenClaw-style systems treat the workspace as the host of work, turning actions into inspectable operations over files, terminals, browsers, services, and skills.</p>
+              <figure class="figure-frame">
+                <img src="assets/figures/png/openclaw.png" alt="The OpenClaw Era diagram.">
+                <figcaption>The OpenClaw Era: persistent workspaces, reusable skills, verification loops, and governed task closure.</figcaption>
+              </figure>
+            </article>
+          </div>
+
+          <div class="table-group">
+            <h3>Agent Era vs. OpenClaw Era</h3>
+            <p class="table-intro">The boundary table clarifies why OpenClaw is not just another agent loop: the organizing abstraction changes from external tool interaction to persistent workspace-based task hosting.</p>
+            <div class="table-scroll">
+              <table>
+                <thead>
+                  <tr><th>Dimension</th><th>Agent Era</th><th>OpenClaw Era</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Organizing abstraction</td><td>Environment-action-feedback loop</td><td>Persistent workspace for task hosting</td></tr>
+                  <tr><td>Unit of action</td><td>Tool call or external API invocation</td><td>Workspace operation over files, terminals, browsers, services, and skills</td></tr>
+                  <tr><td>State model</td><td>Episodic observations and short-horizon memory</td><td>Durable files, sessions, logs, repositories, local memory, and snapshots</td></tr>
+                  <tr><td>Knowledge reuse</td><td>Prompt patterns, retrieved memory, or ad-hoc demonstrations</td><td>Reusable skill packages with instructions, scripts, dependencies, examples, and checks</td></tr>
+                  <tr><td>Evaluation focus</td><td>Action correctness and trajectory success rate</td><td>Task closure, final-state verification, repeatability, and auditability</td></tr>
+                  <tr><td>Safety boundary</td><td>Prompt-level guardrails and tool-use policies</td><td>Runtime permissions, provenance tracking, audit logs, and governance over workspace changes</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <details class="paper-table">
+              <summary>Representative Agent Works</summary>
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr><th>Work</th><th>Year</th><th>Category</th><th>Role</th><th>Key Contribution</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>ReAct</td><td>2022</td><td>Agent Architecture</td><td>Agent Framework</td><td>Thought-Action-Observation loop</td></tr>
+                    <tr><td>HuggingGPT</td><td>2023</td><td>Perception</td><td>Agent System</td><td>LLM orchestration of Hugging Face models</td></tr>
+                    <tr><td>Reflexion</td><td>2023</td><td>Planning</td><td>Agent Framework</td><td>Language reflections on failed attempts</td></tr>
+                    <tr><td>Generative Agents</td><td>2023</td><td>Memory</td><td>Agent System</td><td>Memory stream with reflections</td></tr>
+                    <tr><td>Toolformer</td><td>2023</td><td>Tool Use</td><td>Agent Model</td><td>Self-supervised tool-call learning</td></tr>
+                    <tr><td>WebArena</td><td>2023</td><td>Benchmark</td><td>Evaluation</td><td>Realistic web task environments</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section id="workspace-skill" class="section-band">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Workspace + Skill</p>
+            <h2>The Mechanism Behind Digital Colleagues</h2>
+            <p>
+              Workspace + Skill turns episodic interaction into durable digital work. A workspace provides state,
+              evidence, recoverability, and consequences. A skill provides reusable operational knowledge.
+            </p>
+          </div>
+          <div class="paired-panels">
+            <figure class="figure-frame">
+              <img src="assets/figures/png/tool.png" alt="Simple tool invocation diagram.">
+              <figcaption>Simple tool invocation helps with local sub-tasks, but isolated calls are not enough for long-horizon work.</figcaption>
+            </figure>
+            <figure class="figure-frame">
+              <img src="assets/figures/png/workspace.png" alt="Workspace and Skill paradigm diagram.">
+              <figcaption>The Workspace + Skill paradigm combines persistent environments with reusable procedures.</figcaption>
+            </figure>
+          </div>
+          <details class="paper-table">
+            <summary>Representative OpenClaw-Era Works</summary>
+            <div class="table-scroll">
+              <table>
+                <thead>
+                  <tr><th>Work</th><th>Year</th><th>Category</th><th>Role</th><th>Key Contribution</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>OpenClaw</td><td>2026</td><td>Workspace</td><td>Agent Framework</td><td>Persistent workspace with tools, channels, and skills</td></tr>
+                  <tr><td>OpenHands</td><td>2024</td><td>Workspace</td><td>Agent Platform</td><td>Code editing, shell execution, and browsing in controlled environments</td></tr>
+                  <tr><td>SWE-agent</td><td>2024</td><td>Workspace</td><td>Agent-Computer Interface</td><td>Repository navigation and test-feedback interface for agents</td></tr>
+                  <tr><td>Voyager</td><td>2023</td><td>Skill</td><td>Agent System</td><td>Executable skill library learned from environment feedback</td></tr>
+                  <tr><td>Anthropic Agent Skills</td><td>2026</td><td>Skill</td><td>Skill Infrastructure</td><td>Folder-based skills with instructions, scripts, and resources</td></tr>
+                  <tr><td>ClawGuard</td><td>2026</td><td>Governance</td><td>Runtime Guardrail</td><td>File, command, network, and skill boundary enforcement</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section id="data-eval" class="section-band tinted">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Data & Eval</p>
+            <h2>From Static Answers to Auditable Work</h2>
+            <p>
+              As AI systems move from answering questions to acting in workspaces, both data and evaluation must change.
+              The unit of learning and measurement becomes the full state-action-observation trajectory and the verified final state.
+            </p>
+          </div>
+
+          <div class="paired-panels">
+            <figure class="figure-frame">
+              <img src="assets/figures/png/data.png" alt="Data paradigm shift diagram.">
+              <figcaption>Data evolves from prompt-response pairs to reasoning traces and state-action-observation trajectories.</figcaption>
+            </figure>
+            <figure class="figure-frame">
+              <img src="assets/figures/png/eval.png" alt="Evaluation paradigm shift diagram.">
+              <figcaption>Evaluation shifts from final-answer correctness to process judgment and task closure.</figcaption>
+            </figure>
+          </div>
+
+          <div class="table-grid">
+            <article class="table-card full-source-table">
+              <h3>Data Construction</h3>
+              <p>Agent and OpenClaw data must capture tool outputs, UI states, file changes, terminal errors, permissions, workspace snapshots, skills, and final-state evidence.</p>
+              <div class="table-scroll">
+                  <table class="source-table">
+                    <thead>
+                      <tr><th>Stage</th><th>Core Data Unit</th><th>Training / Supervision Signal</th><th>Representative Resources</th><th>Evaluation Focus</th></tr>
+                    </thead>
+                    <tbody>
+                    <tr><td>Chatbot</td><td>Static corpora and instruction&ndash;response pairs</td><td>Human demonstrations, preference comparisons, safety labels, and dialogue corrections</td><td>InstructGPT/RLHF, FLAN/T0, Self-Instruct and open SFT data</td><td>Answer correctness, fluency, helpfulness, preference alignment, and instruction following on mostly static inputs</td></tr>
+                    <tr><td>Thinking LLM Era</td><td>Reasoning-process traces and intermediate solution paths</td><td>Chain-of-thought rationales, self-generated reasoning, step-wise verification, process rewards, and preference optimization</td><td>CoT / zero-shot CoT, Self-Consistency and ToT, PRM800K and Math-Shepherd, DeepSeek-R1</td><td>Reliability of the reasoning path, verifiable math/code performance, step-level correctness, and robustness beyond final-answer accuracy</td></tr>
+                    <tr><td>Agent Era</td><td>State&ndash;action&ndash;observation trajectories with tool feedback</td><td>Tool-call traces, API arguments, execution results, environment feedback, and multi-step recovery signals</td><td>Toolformer, API-Bank / Gorilla / ToolBench, WebArena and OSWorld</td><td>Task success in interactive environments, correct tool selection, argument generation, state tracking, and feedback-driven continuation</td></tr>
+                    <tr><td>OpenClaw / Workspace Era</td><td>Workspace-level trajectories plus reusable skills and final-state evidence</td><td>File, shell, browser, UI, permission, snapshot, skill-package, and safety-policy traces with executable verification</td><td>SWE-bench, ToolSandbox, ClawsBench, ATBench-Claw and ClawSafety</td><td>End-to-end task closure, state verifiability, reproducibility, efficiency, rollback behavior, and trajectory-level safety</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+            </article>
+            <article class="table-card full-source-table">
+              <h3>Evaluation</h3>
+              <p>Next-generation systems must be assessed by reasoning validity, state changes, reliability, efficiency, reproducibility, safety, and task closure.</p>
+              <div class="table-scroll">
+                  <table class="source-table">
+                    <thead>
+                      <tr><th>Stage</th><th>Evaluation Object</th><th>Core Metrics</th><th>Representative Benchmarks</th><th>Main Limitation</th></tr>
+                    </thead>
+                    <tbody>
+                    <tr><td>Final-Output Evaluation</td><td>Static answers, labels, generated text, or executable final outputs</td><td>Accuracy, exact match, BLEU/ROUGE, preference win rate, and Pass@1</td><td>MMLU, GSM8K / MATH, GPQA / FrontierMath, BIG-Bench / HELM</td><td>Scores the endpoint but cannot reveal whether the model used a valid reasoning path or merely reached the right answer accidentally</td></tr>
+                    <tr><td>Process-Level Evaluation</td><td>Reasoning traces, intermediate steps, critiques, and verification paths</td><td>Step correctness, judge preference, process-reward quality, consistency, and contamination resistance</td><td>Hard2Verify / DeltaBench, ProcessBench / PRMBench</td><td>Improves trace inspection but may rely on judge models, incomplete process labels, or reasoning that is not grounded in external state</td></tr>
+                    <tr><td>Task-Closure Evaluation</td><td>Interactive trajectories and final workspace states after tool, web, file, or UI operations</td><td>Task success rate, final-state verification, tool-call efficiency, reliability, reproducibility, and trajectory-level safety</td><td>SWE-bench, WebArena, OSWorld, ToolSandbox / tau-bench</td><td>Requires executable environments, reproducible initial states, trajectory logs, replay mechanisms, and costly final-state checks</td></tr>
+                    <tr><td>Workspace/OpenClaw Evaluation</td><td>Persistent workspaces with skills, permissions, snapshots, external services, and auditable action chains</td><td>Closure rate, unsafe-action rate, rollback behavior, skill stability, state diffs, auditability, and governance compliance</td><td>Claw-Eval, ClawBench, ClawsBench, ATBench-Claw, ClawSafety</td><td>Makes evaluation realistic but increases infrastructure cost, safety risk, simulator-design burden, and cross-run comparability challenges</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+            </article>
+          </div>
+
+          <div class="stage-list">
+            <h3>Evaluation Stages</h3>
+            <details class="paper-table benchmark-details">
+              <summary>Stage I: Final-Output Evaluation</summary>
+              <p>Representative final-output benchmark scores across MMLU, GSM8K, MATH, HumanEval, and related metrics.</p>
+              <div class="table-scroll">
+                  <table class="benchmark-table">
+                    <thead>
+                      <tr><th>Model</th><th>Base Model</th><th>MMLU</th><th>MMLU-Pro</th><th>GSM8K</th><th>MATH</th><th>MATH-500</th><th>HumanEval</th></tr>
+                    </thead>
+                    <tbody>
+                    <tr><td>GPT-5.4</td><td>-</td><td>94.0</td><td>87.0</td><td>98.1</td><td>90.2</td><td>-</td><td>94.1</td></tr>
+                    <tr><td>Claude Opus 4.6</td><td>-</td><td>92.1</td><td>82.5</td><td>97.8</td><td>91.5</td><td>-</td><td>92.4</td></tr>
+                    <tr><td>Gemini 3.1 Pro</td><td>-</td><td>92.6</td><td>91.2</td><td>94.2</td><td>85.3</td><td>-</td><td>87.6</td></tr>
+                    <tr><td>DeepSeek-V4-Pro-Base</td><td>-</td><td>90.1</td><td>73.5</td><td>92.6</td><td>64.5</td><td>-</td><td>76.8</td></tr>
+                    <tr><td>Qwen3.7 Max</td><td>-</td><td>-</td><td>89.6</td><td>-</td><td>94.6</td><td>-</td><td>92.4</td></tr>
+                    <tr><td>GLM-5.1</td><td>-</td><td>89.0</td><td>86.0</td><td>95.3</td><td>83.4</td><td>-</td><td>88.6</td></tr>
+                    <tr><td>SAGE-32B (Think)</td><td>Qwen2.5-32B</td><td>90.20</td><td>79.27</td><td>96.74</td><td>-</td><td>91.8</td><td>-</td></tr>
+                    <tr><td>Warmup K&amp;K</td><td>Qwen2.5-14B</td><td>-</td><td>62.7</td><td>-</td><td>-</td><td>77.4</td><td>-</td></tr>
+                    <tr><td>AceMath-72B-Instruct</td><td>Qwen2.5-Math-72B-Instruct</td><td>-</td><td>-</td><td>96.4</td><td>86.1</td><td>-</td><td>-</td></tr>
+                    <tr><td>PromptCoT-DS-7B</td><td>DeepSeek-R1-Distill-Qwen-7B</td><td>-</td><td>-</td><td>92.6</td><td>-</td><td>93.0</td><td>-</td></tr>
+                    <tr><td>Nemotron-CrossThink-32B</td><td>Qwen2.5-32B</td><td>83.60</td><td>69.43</td><td>-</td><td>-</td><td>84.00</td><td>-</td></tr>
+                    <tr><td>Introspective X Training</td><td>-</td><td>50.9</td><td>27.9</td><td>59.5</td><td>46.5</td><td>-</td><td>54.9</td></tr>
+                    <tr><td>CoT2-Meta</td><td>Claude Sonnet 4.5</td><td>-</td><td>88.4</td><td>98.6</td><td>92.8</td><td>-</td><td>72.8</td></tr>
+                    <tr><td>Guideline Forest</td><td>GPT-4o-mini</td><td>-</td><td>-</td><td>93.5</td><td>-</td><td>69.2</td><td>95.4</td></tr>
+                    <tr><td>STOP-ECN</td><td>DeepSeek-R1-Distill-Qwen-7B</td><td>-</td><td>-</td><td>91.1</td><td>-</td><td>86.8</td><td>-</td></tr>
+                    <tr><td>FastMCTS+Branch-DPO</td><td>FastMCTS-7B</td><td>-</td><td>-</td><td>89.9</td><td>75.4</td><td>-</td><td>-</td></tr>
+                    <tr><td>FastMCTS</td><td>Qwen2.5-7B</td><td>-</td><td>-</td><td>88.9</td><td>74.0</td><td>-</td><td>-</td></tr>
+                    <tr><td>Rejection Sampling</td><td>Qwen2.5-7B</td><td>-</td><td>-</td><td>87.1</td><td>70.0</td><td>-</td><td>-</td></tr>
+                    <tr><td>SBS</td><td>DeepSeek-Math-7B-Base</td><td>-</td><td>-</td><td>84.1</td><td>66.3</td><td>-</td><td>-</td></tr>
+                    <tr><td>MCTS</td><td>DeepSeek-Math-7B-Base</td><td>-</td><td>-</td><td>83.2</td><td>64.0</td><td>-</td><td>-</td></tr>
+                    <tr><td>DeepSeekMath-7B-RL</td><td>DeepSeekMath-7B</td><td>-</td><td>-</td><td>88.2</td><td>51.7</td><td>-</td><td>-</td></tr>
+                    <tr><td>SimPO</td><td>Qwen2.5-Math-7B-Instruct</td><td>-</td><td>-</td><td>88.8</td><td>40.0</td><td>56.6</td><td>-</td></tr>
+                    <tr><td>Self-Explore</td><td>DeepSeek-Math-7B-Base</td><td>-</td><td>-</td><td>78.6</td><td>37.7</td><td>-</td><td>-</td></tr>
+                    <tr><td>DeepSeek-Coder-V2-Instruct</td><td>-</td><td>-</td><td>-</td><td>94.9</td><td>75.7</td><td>-</td><td>90.2</td></tr>
+                    <tr><td>OMI2 (Full)</td><td>Qwen2.5-Coder-7B</td><td>-</td><td>-</td><td>88.5</td><td>73.2</td><td>-</td><td>-</td></tr>
+                    <tr><td>CODEI/O</td><td>Qwen2.5-Coder-7B</td><td>-</td><td>-</td><td>86.4</td><td>71.9</td><td>-</td><td>-</td></tr>
+                    <tr><td>PyEdu</td><td>Qwen2.5-Coder-7B</td><td>-</td><td>-</td><td>85.8</td><td>71.4</td><td>-</td><td>-</td></tr>
+                    <tr><td>MathCoder-CL</td><td>Code-Llama-7B</td><td>-</td><td>-</td><td>67.8</td><td>30.2</td><td>-</td><td>-</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+            </details>
+            <details class="paper-table benchmark-details">
+              <summary>Stage II: Process-Level Reasoning Evaluation</summary>
+              <p>Process-oriented evaluation across Hard2Verify, DeltaBench, ProcessBench, and PRMBench.</p>
+              <div class="table-scroll">
+                <table class="benchmark-table metric-table">
+                  <thead>
+                    <tr class="group-row"><th rowspan="2">Model / Method</th><th rowspan="2">Base Model</th><th colspan="6">Hard2Verify</th><th colspan="4">DeltaBench</th><th colspan="4">ProcessBench</th><th colspan="4">PRMBench</th></tr>
+                    <tr><th>Step A</th><th>Step F1</th><th>Resp. A</th><th>Resp. F1</th><th>ErrID A</th><th>ErrID F1</th><th>Avg.</th><th>HM</th><th>Corr.</th><th>Err.</th><th>GSM8K</th><th>MATH</th><th>Olympiad</th><th>Omni</th><th>Overall</th><th>Simp.</th><th>Sound.</th><th>Sens.</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>GPT-5</td><td>-</td><td>86.53</td><td>85.83</td><td>89.69</td><td>89.52</td><td>70.61</td><td>69.72</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>Gemini 2.5 Pro</td><td>-</td><td>83.37</td><td>83.09</td><td>85.73</td><td>85.46</td><td>52.46</td><td>52.46</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>Claude Sonnet 4</td><td>-</td><td>70.61</td><td>60.37</td><td>78.24</td><td>73.44</td><td>53.45</td><td>39.30</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>DeepSeek-R1</td><td>-</td><td>68.92</td><td>62.30</td><td>73.95</td><td>72.75</td><td>54.23</td><td>45.35</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>67.8</td><td>62.9</td><td>71.4</td><td>77.1</td></tr>
+                    <tr><td>Qwen3-235B-A22B</td><td>-</td><td>72.55</td><td>64.03</td><td>79.42</td><td>77.87</td><td>60.90</td><td>50.78</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>Qwen3-Next-80B-A3B</td><td>-</td><td>67.91</td><td>54.69</td><td>75.08</td><td>68.31</td><td>58.29</td><td>43.05</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>GPT-4o</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>49.9</td><td>48.7</td><td>42.0</td><td>57.9</td><td>79.2</td><td>63.6</td><td>51.4</td><td>53.5</td><td>66.8</td><td>59.7</td><td>70.9</td><td>75.8</td></tr>
+                    <tr><td>o1-mini</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>93.2</td><td>88.9</td><td>87.2</td><td>82.4</td><td>68.8</td><td>64.6</td><td>72.1</td><td>75.5</td></tr>
+                    <tr><td>Gemini-2.0-thinking-exp-1219</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>68.8</td><td>66.2</td><td>71.8</td><td>75.3</td></tr>
+                    <tr><td>QwQ-32B-Preview</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>88.0</td><td>78.7</td><td>57.8</td><td>61.3</td><td>63.6</td><td>56.4</td><td>68.2</td><td>73.5</td></tr>
+                    <tr><td>Llama-3.3-70B-Instruct</td><td>-</td><td>54.28</td><td>18.37</td><td>57.04</td><td>28.16</td><td>49.44</td><td>2.50</td><td>-</td><td>-</td><td>-</td><td>-</td><td>82.9</td><td>59.4</td><td>46.7</td><td>43.0</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>Qwen2.5-72B-Instruct</td><td>-</td><td>56.01</td><td>26.36</td><td>61.06</td><td>46.89</td><td>26.49</td><td>16.38</td><td>-</td><td>-</td><td>-</td><td>-</td><td>76.2</td><td>61.8</td><td>54.6</td><td>52.2</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>Qwen2.5-14B-Instruct</td><td>-</td><td>60.45</td><td>47.59</td><td>63.40</td><td>63.23</td><td>43.47</td><td>18.86</td><td>-</td><td>-</td><td>-</td><td>-</td><td>69.3</td><td>53.3</td><td>45.0</td><td>41.3</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>Qwen2.5-Math-72B-Instruct</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>65.8</td><td>52.1</td><td>32.5</td><td>31.7</td><td>57.4</td><td>55.1</td><td>61.1</td><td>67.1</td></tr>
+                    <tr><td>Qwen2.5-Math-PRM-72B</td><td>Qwen2.5-Math-72B</td><td>55.82</td><td>35.50</td><td>66.80</td><td>64.91</td><td>41.80</td><td>37.28</td><td>-</td><td>-</td><td>-</td><td>-</td><td>87.3</td><td>80.6</td><td>74.3</td><td>71.1</td><td>68.2</td><td>54.6</td><td>73.9</td><td>77.0</td></tr>
+                    <tr><td>Qwen2.5-Math-PRM-7B</td><td>Qwen2.5-Math-7B</td><td>57.56</td><td>42.37</td><td>63.08</td><td>57.57</td><td>35.03</td><td>32.50</td><td>-</td><td>-</td><td>-</td><td>-</td><td>82.4</td><td>77.6</td><td>67.5</td><td>66.3</td><td>65.5</td><td>52.1</td><td>71.0</td><td>75.5</td></tr>
+                    <tr><td>UniversalPRM-7B</td><td>Qwen2.5-Math-7B-Instruct</td><td>64.17</td><td>60.27</td><td>54.74</td><td>41.46</td><td>26.08</td><td>25.97</td><td>-</td><td>-</td><td>-</td><td>-</td><td>85.8</td><td>77.7</td><td>67.6</td><td>66.4</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>ActPRM-X</td><td>Qwen2.5-Math-PRM-7B</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>82.7</td><td>82.0</td><td>72.0</td><td>67.3</td><td>66.7</td><td>54.5</td><td>72.7</td><td>75.6</td></tr>
+                    <tr><td>ActPRM</td><td>Qwen2.5-Math-7B</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>81.6</td><td>79.8</td><td>71.4</td><td>67.0</td><td>65.5</td><td>53.6</td><td>71.3</td><td>75.2</td></tr>
+                    <tr><td>RefCritic-R1-14B</td><td>DeepSeek-R1-Distill-Qwen-14B</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>86.3</td><td>82.0</td><td>67.6</td><td>72.3</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>RefCritic-Qwen-14B</td><td>Qwen2.5-14B-Instruct</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>81.9</td><td>71.2</td><td>58.1</td><td>60.7</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>FlexiVe (Think@64)</td><td>DeepSeek-R1-Distill-Qwen-14B</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>88.1</td><td>90.1</td><td>86.7</td><td>80.4</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>FlexiVe (Flex@128)</td><td>DeepSeek-R1-Distill-Qwen-14B</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>83.0</td><td>85.0</td><td>80.0</td><td>75.2</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>GenPRM-32B (Maj@8)</td><td>Qwen2.5-32B</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>85.1</td><td>86.3</td><td>78.9</td><td>80.1</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>GenPRM-7B (Maj@8)</td><td>Qwen2.5-7B</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>81.0</td><td>85.7</td><td>78.4</td><td>76.8</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>SPC (Round 2)</td><td>Qwen2.5-7B-Instruct</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>60.5</td><td>59.5</td><td>68.2</td><td>52.8</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>SPC (Round 1)</td><td>Qwen2.5-7B-Instruct</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>58.8</td><td>57.3</td><td>68.4</td><td>49.3</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>SPC (Round 0)</td><td>Qwen2.5-7B-Instruct</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>54.9</td><td>53.5</td><td>45.9</td><td>64.0</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>Qwen2.5-Math-7B-PRM800K</td><td>Qwen2.5-Math-7B</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>58.5</td><td>41.3</td><td>90.1</td><td>26.8</td><td>68.2</td><td>62.6</td><td>50.7</td><td>44.3</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>Pure-PRM-7B</td><td>Qwen2.5-Math-7B</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>69.0</td><td>66.5</td><td>48.4</td><td>45.9</td><td>65.3</td><td>52.2</td><td>70.2</td><td>75.8</td></tr>
+                    <tr><td>Skywork-PRM-7B</td><td>Qwen2.5-Math-7B</td><td>38.52</td><td>34.12</td><td>56.77</td><td>29.81</td><td>11.56</td><td>8.36</td><td>-</td><td>-</td><td>-</td><td>-</td><td>70.8</td><td>53.6</td><td>22.9</td><td>21.0</td><td>65.1</td><td>59.6</td><td>68.5</td><td>73.3</td></tr>
+                    <tr><td>Math-Shepherd-PRM-7B</td><td>Mistral-7B</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>53.3</td><td>14.3</td><td>7.69</td><td>98.8</td><td>47.9</td><td>29.5</td><td>24.8</td><td>23.8</td><td>47.0</td><td>47.1</td><td>45.7</td><td>60.7</td></tr>
+                    <tr><td>RLHFlow-PRM-Mistral-8B</td><td>Llama-3.1-8B</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>50.4</td><td>33.4</td><td>13.8</td><td>15.8</td><td>54.4</td><td>46.7</td><td>57.5</td><td>68.5</td></tr>
+                    <tr><td>ReasonEval-34B</td><td>CodeLlama-34B</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>60.5</td><td>51.5</td><td>63.0</td><td>73.1</td></tr>
+                    <tr><td>ReasonFlux-PRM-7B</td><td>DeepSeek-R1-Distill-Qwen-7B</td><td>53.09</td><td>22.40</td><td>55.89</td><td>53.82</td><td>42.48</td><td>28.71</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>uPRM</td><td>Qwen2.5-Math-7B</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>58.3</td><td>52.6</td><td>42.7</td><td>39.8</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="table-note">Notes. Hard2Verify reports balanced accuracy and F1 for step, response, and error-identification tasks; DeltaBench reports average, HM, correct-step recall, and error-step recall; ProcessBench and PRMBench report their original F1/PRMScore metrics.</p>
+            </details>
+            <details class="paper-table benchmark-details">
+              <summary>Stage III: Task-Closure Evaluation</summary>
+              <p>Interactive task success and pass-rate evaluation across SWE, terminal, OS, web, and browsing benchmarks.</p>
+              <div class="table-scroll">
+                  <table class="benchmark-table">
+                    <thead>
+                      <tr><th>Model / Method</th><th>Base Model</th><th>SWE-V</th><th>Terminal 2.0</th><th>OSWorld-V</th><th>WebArena-V</th><th>BrowseComp</th><th>MCP-Atlas</th></tr>
+                    </thead>
+                    <tbody>
+                    <tr><td>GPT-5.4 xHigh</td><td>-</td><td>-</td><td>75.1</td><td>75.0</td><td>67.3</td><td>82.7</td><td>67.2</td></tr>
+                    <tr><td>Claude Opus 4.6 Max</td><td>-</td><td>80.8</td><td>65.4</td><td>-</td><td>-</td><td>83.7</td><td>73.8</td></tr>
+                    <tr><td>Gemini 3.1 Pro High</td><td>-</td><td>80.6</td><td>68.5</td><td>-</td><td>-</td><td>85.9</td><td>69.2</td></tr>
+                    <tr><td>DeepSeek-V4-Pro Max</td><td>-</td><td>80.6</td><td>67.9</td><td>-</td><td>-</td><td>83.4</td><td>73.6</td></tr>
+                    <tr><td>Kimi-K2.6 Thinking</td><td>-</td><td>80.2</td><td>66.7</td><td>-</td><td>-</td><td>83.2</td><td>66.6</td></tr>
+                    <tr><td>GLM-5.1 Thinking</td><td>-</td><td>-</td><td>63.5</td><td>-</td><td>-</td><td>79.3</td><td>71.8</td></tr>
+                    <tr><td>UI-TARS-2</td><td>UI-TARS-2</td><td>68.7</td><td>45.3*</td><td>-</td><td>-</td><td>29.6*</td><td>-</td></tr>
+                    <tr><td>OpenCUA-72B</td><td>Qwen2.5-VL-72B</td><td>-</td><td>-</td><td>45.0</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>SWE-Exp</td><td>Claude 4 Sonnet</td><td>73.0</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>Kimi-Dev</td><td>Qwen2.5-72B-Base</td><td>60.4</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>SWE-Master-32B-RL</td><td>Qwen2.5-Coder-32B</td><td>61.4</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>PDR+RTV</td><td>Gemini 3.1 Pro</td><td>76.60</td><td>64.77</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>TACT-GATE</td><td>Qwen3.5-27B</td><td>73.3</td><td>36.0</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>IHR+NLAH</td><td>GPT-5.4-mini</td><td>73.0</td><td>53.9</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>Polar RL (Pi)</td><td>Qwen3.5-4B</td><td>40.4</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>SA-SWE-32B</td><td>Qwen3-32B</td><td>39.4</td><td>16.25</td><td>-</td><td>-</td><td>19.4 (+)</td><td>-</td></tr>
+                    <tr><td>CODESKILL</td><td>Qwen3.5-35B-A3B</td><td>66.0</td><td>34.12</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>CodeScout-14B</td><td>Qwen3-Coder-30B-A3B</td><td>46.00</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>TACO</td><td>MiniMax-M2.5</td><td>-</td><td>44.16</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>ComputerRL</td><td>GLM-4.1V-9B-Thinking</td><td>-</td><td>-</td><td>48.0</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>UltraCUA-32B-RL</td><td>UltraCUA-32B</td><td>-</td><td>-</td><td>43.7</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>OS-Symphony</td><td>GPT-5</td><td>-</td><td>-</td><td>65.8</td><td>-</td><td>-</td><td>-</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              <p class="table-note">Notes. SWE-V denotes SWE-bench Verified; OSWorld-V denotes OSWorld-Verified; WebArena-V denotes WebArena-Verified; Terminal 2.0 denotes Terminal-Bench v2.0.</p>
+            </details>
+            <details class="paper-table benchmark-details">
+              <summary>Stage IV: Workspace and OpenClaw Evaluation</summary>
+              <p>Workspace-level evaluation, OpenClaw metrics, and trajectory-level safety where lower attack success rate is better.</p>
+              <div class="table-scroll">
+                <table class="benchmark-table metric-table">
+                  <thead>
+                    <tr class="group-row"><th rowspan="2">Model / Method</th><th rowspan="2">Setting</th><th colspan="2">Claw-Eval</th><th>ClawBench</th><th colspan="3">ClawsBench</th><th colspan="3">ATBench-Claw</th><th>ClawSafety</th></tr>
+                    <tr><th>Gen.</th><th>Multi</th><th>SR</th><th>TSR</th><th>UAR</th><th>SCR</th><th>Acc.</th><th>F1</th><th>Rec.</th><th>ASR &darr;</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Claude Opus 4.6</td><td>OpenClaw on/on</td><td>70.8</td><td>68.4</td><td>-</td><td>63</td><td>23</td><td>50</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>Claude Sonnet 4.6</td><td>OpenClaw / ClawSafety</td><td>68.3</td><td>65.8</td><td>33.3</td><td>56</td><td>13</td><td>48</td><td>-</td><td>-</td><td>-</td><td>40.0</td></tr>
+                    <tr><td>MiMo-V2.5-Pro</td><td>Claw-Eval</td><td>64.0</td><td>63.2</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>GLM-5.1</td><td>Claw-Eval</td><td>62.7</td><td>60.5</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>Muse Spark</td><td>Claw-Eval</td><td>62.7</td><td>68.4</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>Kimi K2.6</td><td>Claw-Eval</td><td>61.5</td><td>65.8</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>GPT-5.4</td><td>OpenClaw on/on</td><td>60.2</td><td>60.5</td><td>6.5</td><td>53</td><td>7</td><td>41</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>DeepSeek V4 Pro</td><td>Claw-Eval</td><td>58.4</td><td>65.8</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>Qwen3.6 Plus</td><td>Claw-Eval</td><td>57.1</td><td>65.8</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>Qwen3.5-397B-A17B</td><td>AgentDoG prompt</td><td>57.8</td><td>52.6</td><td>-</td><td>-</td><td>-</td><td>-</td><td>83.8</td><td>86.5</td><td>87.5</td><td>-</td></tr>
+                    <tr><td>GLM-5</td><td>OpenClaw text-only / on/on</td><td>-</td><td>-</td><td>24.2</td><td>60</td><td>23</td><td>48</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>Gemini 3 Flash</td><td>ClawBench</td><td>-</td><td>-</td><td>19.0</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>Claude Haiku 4.5</td><td>ClawBench</td><td>-</td><td>-</td><td>18.3</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>Gemini 3.1 Flash-Lite</td><td>OpenClaw on/on</td><td>-</td><td>-</td><td>3.3</td><td>39</td><td>23</td><td>26</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>Kimi K2.5</td><td>OpenClaw / ClawSafety</td><td>52.8</td><td>50.0</td><td>0.7</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>60.8</td></tr>
+                    <tr><td>Gemini 3.1 Pro</td><td>OpenClaw on/on</td><td>55.9</td><td>65.8</td><td>-</td><td>58</td><td>10</td><td>48</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                    <tr><td>Qwen3Guard-Gen-8B</td><td>Guard model</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>52.1</td><td>36.3</td><td>23.1</td><td>-</td></tr>
+                    <tr><td>Llama-Guard-4-12B</td><td>Guard model</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>74.4</td><td>73.4</td><td>60.0</td><td>-</td></tr>
+                    <tr><td>ShieldAgent</td><td>Guard model</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>68.1</td><td>60.1</td><td>43.3</td><td>-</td></tr>
+                    <tr><td>Llama-3.3-70B-Instruct</td><td>AgentDoG prompt</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>80.6</td><td>82.3</td><td>76.4</td><td>-</td></tr>
+                    <tr><td>AgentDoG-Qwen3-4B</td><td>AgentDoG</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>87.2</td><td>89.6</td><td>92.9</td><td>-</td></tr>
+                    <tr><td>Gemini 2.5 Pro</td><td>OpenClaw</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>55.0</td></tr>
+                    <tr><td>DeepSeek V3</td><td>OpenClaw</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>67.5</td></tr>
+                    <tr><td>GPT-5.1</td><td>OpenClaw</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>75.0</td></tr>
+                    <tr><td>Claude Sonnet 4.6 + Nanobot</td><td>Nanobot scaffold</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>48.6</td></tr>
+                    <tr><td>Claude Sonnet 4.6 + NemoClaw</td><td>NemoClaw scaffold</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>45.8</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="table-note">Notes. Claw-Eval reports general and multi-turn PassAll<sup>3</sup>; ClawsBench reports task success, unsafe action, and safe completion rates; ClawSafety reports attack success rate, where lower is better.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section id="future" class="section-band">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Future</p>
+            <h2>Challenges and Future Directions</h2>
+            <p>
+              Reliable autonomy introduces failures that are longer-horizon, stateful, harder to reverse, and tied to
+              real workspace changes. Future systems need stronger closure, safer permissions, robust memory, and governance.
+            </p>
+          </div>
+          <div class="paired-panels">
+            <figure class="figure-frame">
+              <img src="assets/figures/png/challenges.png" alt="Open challenges for reliable autonomy.">
+              <figcaption>Open challenges for reliable autonomy: task closure, safety and governance, memory, context management, and persistent workspace state.</figcaption>
+            </figure>
+            <figure class="figure-frame">
+              <img src="assets/figures/png/future.png" alt="Future directions toward self-evolving AI ecosystems.">
+              <figcaption>Future directions toward self-evolving AI ecosystems that accumulate experience and improve their operating environments.</figcaption>
+            </figure>
+          </div>
+
+          <div class="future-content">
+            <article class="future-block">
+              <h3>Open Challenges: Making Autonomy Reliable</h3>
+              <p>
+                Current agents can look impressive in isolated demonstrations, but dependable digital work requires
+                stable performance across long horizons, safe operation under permission constraints, and persistent
+                memory that does not collapse as context grows. The challenge is not only stronger capability, but
+                autonomous behavior that is auditable, recoverable, and controllable.
+              </p>
+              <div class="future-grid">
+                <article class="future-card">
+                  <h4>Long-Horizon Task Closure</h4>
+                  <p>
+                    Agents must maintain progress until the intended workspace state is achieved. Tool errors,
+                    partial failures, and early planning mistakes can compound across many actions, so future systems
+                    need progress monitoring, intermediate verification, self-healing, and rollback to safe checkpoints.
+                  </p>
+                </article>
+                <article class="future-card">
+                  <h4>Safety and Governance</h4>
+                  <p>
+                    Once agents can touch files, browsers, APIs, terminals, databases, and enterprise applications,
+                    safety becomes operational. Fine-grained permissions, risk-aware action validation, audit trails,
+                    sandboxing, and calibrated human approval are required for high-impact actions.
+                  </p>
+                </article>
+                <article class="future-card">
+                  <h4>Memory and Persistent State</h4>
+                  <p>
+                    Long-running work needs more than a transient context window. Agents need working memory for the
+                    current trajectory, episodic memory for past interactions, procedural memory for reusable skills,
+                    and external state stores that preserve decision-critical facts while discarding noise.
+                  </p>
+                </article>
+              </div>
+            </article>
+
+            <article class="future-block">
+              <h3>Future Directions: Toward Self-Evolving AI Ecosystems</h3>
+              <p>
+                The next stage is likely to be defined not only by larger foundation models, but by the ecosystems
+                around them. Capability becomes distributed across prompts, context pipelines, tools, memories,
+                workspaces, evaluators, skills, policies, and governance layers. In this view, operational experience
+                becomes the material from which systems improve.
+              </p>
+              <div class="future-grid future-grid-wide">
+                <article class="future-card">
+                  <h4>Prompt, Context, and Harness Engineering</h4>
+                  <p>
+                    Prompts specify intent, context supplies task-relevant state, and harnesses define the operational
+                    world where actions have consequences. Future progress depends on execution substrates that make
+                    actions inspectable, constrained, replayable, and learnable.
+                  </p>
+                </article>
+                <article class="future-card">
+                  <h4>AI-Native Workspaces</h4>
+                  <p>
+                    A workspace gives the model a digital body: files, terminals, browsers, repositories, logs,
+                    snapshots, permissions, provenance, replay, rollback, and final-state diffs. These primitives make
+                    both safety and learning possible.
+                  </p>
+                </article>
+                <article class="future-card">
+                  <h4>Beyond-Gradient Learning</h4>
+                  <p>
+                    Improvement can happen outside model weights. A failed tool call can become a better wrapper, a
+                    repeated correction can become memory, a successful trajectory can become a skill, and a benchmark
+                    failure can become a regression test.
+                  </p>
+                </article>
+                <article class="future-card">
+                  <h4>Composable Skills and Multi-Agent Work</h4>
+                  <p>
+                    Skills need interfaces, versions, dependency contracts, tests, documentation, security review, and
+                    deprecation. Multi-agent systems also need shared state, ownership boundaries, escalation protocols,
+                    and final-state verifiers.
+                  </p>
+                </article>
+              </div>
+            </article>
+          </div>
+
+          <div class="callout">
+            <h3>Toward Self-Evolving AI Ecosystems</h3>
+            <p>
+              A governed self-evolving loop turns operational traces into durable assets: successful trajectories
+              become reusable skills, failures become regression tests, user corrections become memories, tool errors
+              become wrapper updates, and safety incidents become policies. Every consequential action should become
+              evidence, and every durable update should be validated, versioned, auditable, reversible, and deployed
+              under explicit permission boundaries.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="resources" class="section-band resources-band">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Resources</p>
+            <h2>Resources</h2>
+            <p>Access the paper, code, citation, project page, and contact channel for Next-Generation AI Systems.</p>
+          </div>
+          <div class="resource-grid">
+            <a class="resource-link" href="#resources"><img src="assets/icons/icons8-website-100.png" alt="">Paper<span>Link pending</span></a>
+            <a class="resource-link" href="https://github.com/Next-Generation-AI-Systems/Next-Generation-AI-Systems.github.io"><img src="assets/icons/github.png" alt="">Code<span>GitHub repository</span></a>
+            <a class="resource-link" href="https://next-generation-ai-systems.github.io/"><img src="assets/icons/icons8-robot-100.png" alt="">Project<span>GitHub Pages</span></a>
+            <a class="resource-link" href="mailto:email@example.com"><img src="assets/icons/icons8-email-96.png" alt="">Contact<span>email@example.com</span></a>
+          </div>
+
+          <div class="citation-box">
+            <div>
+              <h3>Citation</h3>
+              <p>Use the BibTeX below as a placeholder until the final citation is available.</p>
+            </div>
+            <button class="button" type="button" data-copy-citation>Copy BibTeX</button>
+            <pre id="citation"><code>@article{next_generation_ai_systems,
+  title   = {Next-Generation AI Systems},
+  author  = {Author One and Author Two and Author Three},
+  year    = {2025},
+  note    = {Project page: https://next-generation-ai-systems.github.io/}
+}</code></pre>
+          </div>
+
+          <div class="footer-logos" aria-label="Institution logos">
+            <img src="assets/logos/youtu_logo.png" alt="YouTu logo">
+            <img src="assets/logos/thu_log.png" alt="Tsinghua logo">
+          </div>
+        </div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <p>Next-Generation AI Systems. A project page for the paper From Chatbot to Digital Colleague.</p>
+    </footer>
+
+    <script src="script.js?v=20260608e"></script>
   </body>
 </html>
