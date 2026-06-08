@@ -420,7 +420,7 @@ figcaption {
 }
 
 .figure-wide.roadmap-map {
-  width: min(640px, 100%);
+  width: min(820px, 100%);
   margin-right: auto;
   margin-left: auto;
 }
