@@ -90,3 +90,99 @@ color: #1C2B33;
 - Use the Tencent YouTu logo as a first-screen institutional signal when appropriate.
 - Keep cards and callouts modest, paper-like, and information dense.
 - Prefer clear academic sections: abstract, roadmap, resources, figures, citation, and links.
+
+## Proposed Homepage Structure
+
+The homepage should feel like a polished research project page rather than a marketing landing page. The first screen should immediately show the paper identity, institutional branding, and the central "from Chatbot to Digital Colleague" idea.
+
+| Page Section | Purpose | Figures / Assets |
+| --- | --- | --- |
+| Header / Hero | Paper title, subtitle, author/institution line, primary links to paper/code/data/citation. | `assets/logos/tencentyoutu.png`, `assets/figures/png/abs.png` |
+| Abstract Snapshot | Condensed abstract plus 3-4 contribution bullets: cognitive core, task execution, workspace + skill, evolving evaluation. | `assets/figures/png/abs.png` |
+| Roadmap and Timeline | Show the survey's high-level map of next-generation AI systems. | `assets/figures/png/map.png`, `assets/figures/png/horizon.png` |
+| Cognitive Core | Explain the transition from Chatbot-era next-token systems to Thinking LLMs. | `assets/figures/png/chatbot.png`, `assets/figures/png/thinkingllm.png` |
+| Task Execution | Explain tool use, agent loops, and the move toward OpenClaw-style task closure. | `assets/figures/png/agent.png`, `assets/figures/png/openclaw.png` |
+| Workspace + Skill | Present the persistent workspace and reusable skill paradigm as the paper's core system-level lens. | `assets/figures/png/tool.png`, `assets/figures/png/workspace.png` |
+| Data and Evaluation | Explain the shift from instruction-response pairs to trajectories, and from static benchmarks to auditable environments. | `assets/figures/png/data.png`, `assets/figures/png/eval.png` |
+| Challenges and Future | Summarize open challenges, governance questions, and the future direction of AI workstations. | `assets/figures/png/challenges.png`, `assets/figures/png/future.png` |
+| Full Figure Gallery | Include every paper figure in a compact gallery for fast scanning and citation/reuse. | All PNG figure assets |
+| Resources | Paper PDF, BibTeX, dataset, project links, contact, and acknowledgements. | `assets/icons/*.png`, logos as needed |
+
+## Figure Asset Handling
+
+The paper stores its main figures as PDF files. For the web page, the safest approach is:
+
+1. Keep the original PDFs as source-quality assets under `assets/figures/pdf/`.
+2. Convert each PDF into a PNG under `assets/figures/png/`.
+3. Use PNG files in normal responsive HTML image elements.
+4. Optionally link each PNG figure back to its original PDF.
+
+Browsers can display PDFs through `<iframe>` or `<object>`, but PDF files are not reliable as ordinary `<img>` sources across browsers and devices. Therefore, the homepage should use PNGs for image display and keep PDFs for high-quality download/open-in-new-tab access.
+
+Recommended HTML pattern:
+
+```html
+<figure>
+  <img
+    src="assets/figures/png/map.png"
+    alt="Roadmap and evolutionary timeline of next-generation AI systems"
+    loading="lazy"
+  >
+  <figcaption>
+    Roadmap and timeline.
+    <a href="assets/figures/pdf/map.pdf">Open source PDF</a>
+  </figcaption>
+</figure>
+```
+
+If a direct PDF preview is needed, use:
+
+```html
+<object
+  data="assets/figures/pdf/map.pdf"
+  type="application/pdf"
+  width="100%"
+  height="720"
+>
+  <a href="assets/figures/pdf/map.pdf">Open PDF</a>
+</object>
+```
+
+Current conversion command used for each figure:
+
+```powershell
+pdftoppm -png -r 160 -singlefile assets/figures/pdf/map.pdf assets/figures/png/map
+```
+
+## Copied Figure Inventory
+
+All core paper figures referenced by the TeX source have been copied into this homepage folder. Each figure has both a PDF source and a PNG web-display version.
+
+| Figure | PDF Source | PNG for Web | Suggested Homepage Role |
+| --- | --- | --- | --- |
+| Abstract overview | `assets/figures/pdf/abs.pdf` | `assets/figures/png/abs.png` | Hero or abstract visual summary. |
+| Roadmap | `assets/figures/pdf/map.pdf` | `assets/figures/png/map.png` | Main roadmap section. |
+| Horizon | `assets/figures/pdf/horizon.pdf` | `assets/figures/png/horizon.png` | Timeline/time-horizon supplement. |
+| Chatbot | `assets/figures/pdf/chatbot.pdf` | `assets/figures/png/chatbot.png` | Chatbot-era cognitive core. |
+| Thinking LLM | `assets/figures/pdf/thinkingllm.pdf` | `assets/figures/png/thinkingllm.png` | Reasoning and test-time compute. |
+| Agent | `assets/figures/pdf/agent.pdf` | `assets/figures/png/agent.png` | Tool-using agent workflow. |
+| OpenClaw | `assets/figures/pdf/openclaw.pdf` | `assets/figures/png/openclaw.png` | Task closure and workstation system. |
+| Tool | `assets/figures/pdf/tool.pdf` | `assets/figures/png/tool.png` | Tool-use and skill interface. |
+| Workspace | `assets/figures/pdf/workspace.pdf` | `assets/figures/png/workspace.png` | Persistent workspace paradigm. |
+| Data | `assets/figures/pdf/data.pdf` | `assets/figures/png/data.png` | Data construction section. |
+| Evaluation | `assets/figures/pdf/eval.pdf` | `assets/figures/png/eval.png` | Evaluation section. |
+| Challenges | `assets/figures/pdf/challenges.pdf` | `assets/figures/png/challenges.png` | Open challenges. |
+| Future | `assets/figures/pdf/future.pdf` | `assets/figures/png/future.png` | Future directions. |
+
+Copied branding and metadata assets:
+
+- `assets/logos/tencentyoutu.png`
+- `assets/logos/youtu_logo.png`
+- `assets/logos/youtulogo.jpg`
+- `assets/logos/thu_log.png`
+- `assets/icons/github.png`
+- `assets/icons/huggingface-color.png`
+- `assets/icons/icons8-date-96.png`
+- `assets/icons/icons8-email-96.png`
+- `assets/icons/icons8-website-100.png`
+- `assets/icons/icons8-robot-100.png`
