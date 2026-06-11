@@ -128,12 +128,32 @@ The first screen should include:
 - Paper title: `Next-Generation AI Systems`
 - Subtitle / slogan: `From Chatbot to Digital Colleague`
 - Author placeholders:
-  - `Author*`
-  - `Author Two`
-  - `Author Three`
+  - `Yongheng Zhang*`
+  - `Ziang Liu*`
+  - `Jiaxuan Zhu*`
+  - `Shuai Wang`
+  - `Xiangqi Chen`
+  - `Haojing Huang`
+  - `Jiayi Kuang`
+  - `Siyu Chen`
+  - `Ao Shen`
+  - `Hao Wu`
+  - `Qiufeng Wang`
+  - `Qian-Wen Zhang`
+  - `Junnan Dong`
+  - `Wenhao Jiang`
+  - `Ying Shen`
+  - `Hai-Tao Zheng`
+  - `Yinghui Li†`
+  - `Di Yin`
+  - `Xing Sun`
+  - `Philip S. Yu`
 - Affiliation placeholders:
-  - `Affiliation One`
-  - `Affiliation Two`
+  - `Tencent Youtu Lab`
+  - `Tsinghua University`
+  - `Sun Yat-sen University`
+  - `Central South University`
+  - `University of Illinois at Chicago`
 - Metadata placeholders:
   - Date: `June 13, 2025`
   - Correspondence: `email@example.com`
@@ -170,7 +190,7 @@ This section drafts the text that should appear on the website. The abstract mus
 
 ### Top Navigation Copy
 
-- Brand text: `Next-Generation AI Systems`
+- Brand text: `From Chatbot to Digital Colleague`
 - Logo image: `assets/logos/tencentyoutu.png`
 - Navigation links:
   - `Overview`
@@ -213,13 +233,13 @@ A survey of how large language models are evolving from conversational answer ge
 Author line placeholder:
 
 ```text
-Author One*, Author Two, Author Three
+Yongheng Zhang*, Ziang Liu*, Jiaxuan Zhu*, Shuai Wang, Xiangqi Chen, Haojing Huang, Jiayi Kuang, Siyu Chen, Ao Shen, Hao Wu, Qiufeng Wang, Qian-Wen Zhang, Junnan Dong, Wenhao Jiang, Ying Shen, Hai-Tao Zheng, Yinghui Li†, Di Yin, Xing Sun, Philip S. Yu
 ```
 
 Affiliation line placeholder:
 
 ```text
-1 Affiliation One    2 Affiliation Two
+¹Tencent Youtu Lab ²Tsinghua University ³Sun Yat-sen University ⁴Central South University ⁵University of Illinois at Chicago
 ```
 
 Metadata placeholder:
@@ -710,7 +730,7 @@ Citation placeholder:
 ```bibtex
 @article{next_generation_ai_systems,
   title   = {Next-Generation AI Systems},
-  author  = {Author One and Author Two and Author Three},
+  author  = {Yongheng Zhang and Ziang Liu and Jiaxuan Zhu and Shuai Wang and Xiangqi Chen and Haojing Huang and Jiayi Kuang and Siyu Chen and Ao Shen and Hao Wu and Qiufeng Wang and Qian-Wen Zhang and Junnan Dong and Wenhao Jiang and Ying Shen and Hai-Tao Zheng and Yinghui Li and Di Yin and Xing Sun and Philip S. Yu},
   year    = {2025},
   note    = {Project page: https://next-generation-ai-systems.github.io/}
 }
