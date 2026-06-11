@@ -128,7 +128,7 @@ The first screen should include:
 - Paper title: `Next-Generation AI Systems`
 - Subtitle / slogan: `From Chatbot to Digital Colleague`
 - Author placeholders:
-  - `Author One*`
+  - `Author*`
   - `Author Two`
   - `Author Three`
 - Affiliation placeholders:
