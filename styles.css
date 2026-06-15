@@ -670,7 +670,7 @@ th {
 
 .footer-logos img {
   max-width: 220px;
-  max-height: 62px;
+  height: 62px;
   object-fit: contain;
   padding: 8px;
   border-radius: 8px;
